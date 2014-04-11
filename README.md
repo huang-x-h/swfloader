@@ -1,11 +1,9 @@
 swfloader
 =========
 
-swf加载器，用于在flex中缓存加载swf文件。可用于组件模块化，加载然后反射得到相应类
+swf加载器，用于在flex中缓存加载swf文件。
 
-加载swf文件提供单个加载和多个加载方式
-
-
+加载进来的swf是同Application应用作用域，这样就可以通过类名来进行反射得到类来创建实例。可用于组件模块化加载。[查看示例](http://huang-x-h.github.io/swfloader)
 
 - 单个加载方式：
 
