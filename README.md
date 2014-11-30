@@ -6,23 +6,23 @@
 
 ## 单个加载方式
 
-		var item:SWFItem = new SWFItem();
-		item.url = "module/MyButtonComp.swf";
-		item.completeHandler = function():void {
-			trace("load complete");
-		};
-		
-		SWFLoaderManager.load(item);
+	var item:SWFItem = new SWFItem();
+	item.url = "module/MyButtonComp.swf";
+	item.completeHandler = function():void {
+		trace("load complete");
+	};
+	
+	SWFLoaderManager.load(item);
 
 ## 多个加载方式
 
 传递swf字符串数组，内部实现去加载相应swf存放到缓存中：
 
-		var loader:SWFListLoader = new SWFListLoader(["module/MyTextComp.swf", "module/MyLoginComp.swf"], function():void {
-			trace("load complete");
-		});
-		
-		loader.load();
+	var loader:SWFListLoader = new SWFListLoader(["module/MyTextComp.swf", "module/MyLoginComp.swf"], function():void {
+		trace("load complete");
+	});
+	
+	loader.load();
 
 ## ChangeLog
 
