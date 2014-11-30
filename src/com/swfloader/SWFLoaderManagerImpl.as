@@ -40,6 +40,7 @@ package com.swfloader
 				{
 					if (swfCache.isComplete(item.url))
 					{
+						item.content = swfCache.get(item.url);
 						item.doCompleteHanlder();
 					}
 					else
@@ -94,7 +95,7 @@ package com.swfloader
 		private function listCompleteHandler(event:Event):void
 		{
 			swfList.shift();
-			swfCache.complete(currentItem.url);
+			swfCache.complete(currentItem.url, currentItem.content);
 			
 			if (swfWaitingQueue.contain(currentItem.url))
 			{
@@ -102,6 +103,7 @@ package com.swfloader
 				
 				for each(var item:SWFItem in waitingQueue)
 				{
+					item.content = swfCache.get(item.url);
 					item.doCompleteHanlder();
 				}
 			}

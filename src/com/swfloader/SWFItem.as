@@ -1,5 +1,6 @@
 package com.swfloader
 {
+	import flash.display.DisplayObject;
 	import flash.display.Loader;
 	import flash.events.ErrorEvent;
 	import flash.events.Event;
@@ -24,10 +25,33 @@ package com.swfloader
 		
 		private var completed:Boolean = false;
 		
+		private var loader:Loader;
+		
 		private var chainedProgressHandler:Function;    
 		private var chainedCompleteHandler:Function;
 		private var chainedIOErrorHandler:Function;
 		private var chainedSecurityErrorHandler:Function;
+		
+		private var _content:DisplayObject;
+
+		/**
+		 * 加载内容
+		 *  
+		 * @return DisplayObject
+		 * 
+		 */		
+		public function get content():DisplayObject
+		{
+			if (loader) {
+				return loader.content;
+			}
+			return _content;
+		}
+
+		public function set content(value:DisplayObject):void
+		{
+			_content = value;
+		}
 		
 		private var _url:String;
 
@@ -98,7 +122,7 @@ package com.swfloader
 			chainedIOErrorHandler = ioErrorHandler;
 			chainedSecurityErrorHandler = securityErrorHandler;
 			
-			var loader:Loader = new Loader();               
+			loader = new Loader();               
 			var loaderContext:LoaderContext = new LoaderContext();
 			urlRequest = new URLRequest(url);
 			

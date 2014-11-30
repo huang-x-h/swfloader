@@ -1,5 +1,7 @@
 package com.swfloader
 {
+	import flash.display.DisplayObject;
+
 	[ExcludeClass]
 	/**
 	 * swf缓存
@@ -35,19 +37,24 @@ package com.swfloader
 			delete swfCache[url];
 		}
 		
+		public function get(url:String):DisplayObject 
+		{
+			return swfCache[url];
+		}
+		
 		public function contain(url:String):Boolean
 		{
 			return url in swfCache;
 		}
 		
-		public function complete(url:String):void
+		public function complete(url:String, content:DisplayObject):void
 		{
-			swfCache[url] = true;
+			swfCache[url] = content;
 		}
 		
 		public function isComplete(url:String):Boolean
 		{
-			return swfCache[url];
+			return !!swfCache[url];
 		}
 	}
 }
