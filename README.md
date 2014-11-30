@@ -1,11 +1,10 @@
-#swfloader
-=========
+#swfloader加载器
 
-swf加载器，用于在flex中缓存加载swf文件。
+用于在flex中缓存加载swf文件。
 
 可用于组件模块化加载。加载完成的组件，下次加载可直接从`SWFCache`中根据url获取相应内容，避免重复加载[查看示例](http://huang-x-h.github.io/swfloader)
 
-## 单个加载方式：
+## 单个加载方式
 
 		var item:SWFItem = new SWFItem();
 		item.url = "module/MyButtonComp.swf";
@@ -15,7 +14,9 @@ swf加载器，用于在flex中缓存加载swf文件。
 		
 		SWFLoaderManager.load(item);
 
-## 多个加载方式，传递swf字符串数组，内部实现去加载相应swf存放到缓存中：
+## 多个加载方式
+
+传递swf字符串数组，内部实现去加载相应swf存放到缓存中：
 
 		var loader:SWFListLoader = new SWFListLoader(["module/MyTextComp.swf", "module/MyLoginComp.swf"], function():void {
 			trace("load complete");
