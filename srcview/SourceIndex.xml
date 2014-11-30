@@ -16,14 +16,15 @@
 		</node>
 		<node label="src">
 			<node icon="packageIcon" label="components" expanded="true">
-				<node icon="actionScriptIcon" label="MyButton.as" url="source/components/MyButton.as.html"/>
-				<node icon="mxmlIcon" label="MyLogin.mxml" url="source/components/MyLogin.mxml.html"/>
-				<node icon="actionScriptIcon" label="MyText.as" url="source/components/MyText.as.html"/>
+				<node icon="actionScriptIcon" label="IComponent.as" url="source/components/IComponent.as.html"/>
+				<node icon="actionScriptIcon" label="MyButtonComp.as" url="source/components/MyButtonComp.as.html"/>
+				<node icon="actionScriptIcon" label="MyLoginComp.as" url="source/components/MyLoginComp.as.html"/>
+				<node icon="actionScriptIcon" label="MyTextComp.as" url="source/components/MyTextComp.as.html"/>
 			</node>
-			<node icon="packageIcon" label="module" expanded="true">
-				<node icon="actionScriptIcon" label="MyButtonComp.as" url="source/module/MyButtonComp.as.html"/>
-				<node icon="actionScriptIcon" label="MyLoginComp.as" url="source/module/MyLoginComp.as.html"/>
-				<node icon="actionScriptIcon" label="MyTextComp.as" url="source/module/MyTextComp.as.html"/>
+			<node icon="packageIcon" label="views" expanded="true">
+				<node icon="actionScriptIcon" label="MyButton.as" url="source/views/MyButton.as.html"/>
+				<node icon="mxmlIcon" label="MyLogin.mxml" url="source/views/MyLogin.mxml.html"/>
+				<node icon="actionScriptIcon" label="MyText.as" url="source/views/MyText.as.html"/>
 			</node>
 			<node icon="mxmlIcon" label="multipleloadapp.mxml" url="source/multipleloadapp.mxml.html"/>
 			<node icon="mxmlAppIcon" selected="true" label="singleloadapp.mxml" url="source/singleloadapp.mxml.html"/>
