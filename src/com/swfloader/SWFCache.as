@@ -2,7 +2,6 @@ package com.swfloader
 {
 	import flash.display.DisplayObject;
 
-	[ExcludeClass]
 	/**
 	 * swf缓存
 	 *  
